@@ -10,6 +10,8 @@ USES=		python gettext-runtime
 
 PLIST=	${.CURDIR}/pkg-plist
 
+PLIST_FILES=	libexec/unit/modules/python%%PYTHON_VER%%.unit.so
+
 MASTERDIR=	${.CURDIR}/../unit
 
 post-configure:

@@ -20,6 +20,10 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--log=/var/log/unit.log \
 		--control=/var/run/control.unit.sock
 
+PLIST_FILES?=	sbin/unitd
+PLIST_DIRS=	libexec/unit/modules \
+		libexec/unit
+
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules
 
