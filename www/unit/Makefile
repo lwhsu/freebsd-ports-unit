@@ -13,11 +13,14 @@ LICENSE=	APACHE20
 
 HAS_CONFIGURE=	yes
 
-CONFIGURE_ARGS=	--prefix=${PREFIX}
-
-PLIST_FILES=	sbin/unitd
+CONFIGURE_ARGS=	--prefix=${PREFIX} \
+		--modules=libexec/unit/modules \
+		--state=libexec/unit \
+		--pid=/var/run/unit.pid \
+		--log=/var/log/unit.log \
+		--control=/var/run/control.unit.sock
 
 post-install:
-	${RMDIR} ${STAGEDIR}${PREFIX}/build
+	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules
 
 .include <bsd.port.mk>
