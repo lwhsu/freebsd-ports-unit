@@ -7,7 +7,8 @@ COMMENT=	Go module for NGINX Unit
 
 USES?=		go
 
-PLIST_FILES=	libexec/unit/modules/go.unit.so
+PLIST_FILES=	# empty
+PLIST=	${.CURDIR}/pkg-plist
 
 MASTERDIR=	${.CURDIR}/../unit
 
