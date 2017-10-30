@@ -13,13 +13,16 @@ PLIST=	${.CURDIR}/pkg-plist
 MASTERDIR=	${.CURDIR}/../unit
 
 post-configure:
-	cd ${CONFIGURE_WRKSRC} && \
+	cd ${WRKSRC} && \
 	env ${GO_ENV} ./configure go
 
-#do-build:
-#	cd ${WRKSRC} && make all
-#
+do-build:
+	cd ${WRKSRC} && make go
+
 #do-install:
 #	cd ${WRKSRC} && make go-install
+
+post-install:
+	@true # override master's
 
 .include "${MASTERDIR}/Makefile"

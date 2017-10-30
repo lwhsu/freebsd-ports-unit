@@ -24,7 +24,9 @@ PLIST_FILES?=	sbin/unitd
 PLIST_DIRS=	libexec/unit/modules \
 		libexec/unit
 
+.if !target(post-install)
 post-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules
+.endif
 
 .include <bsd.port.mk>
