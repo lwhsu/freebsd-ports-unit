@@ -7,7 +7,7 @@ COMMENT=	PHP module for NGINX Unit
 
 PLIST_FILES=	libexec/unit/modules/php.unit.so
 
-USES?=		php:build,embed
+USES=		php:build,embed
 
 MASTERDIR=	${.CURDIR}/../unit
 

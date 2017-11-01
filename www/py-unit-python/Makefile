@@ -6,7 +6,7 @@ PKGNAMESUFFIX=	-python
 
 COMMENT=	Python module for NGINX Unit
 
-USES?=		python gettext-runtime
+USES=		python gettext-runtime
 
 PLIST_FILES=	libexec/unit/modules/python%%PYTHON_VER%%.unit.so
 
