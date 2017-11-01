@@ -21,7 +21,7 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--control=/var/run/control.unit.sock
 
 PLIST_FILES?=	sbin/unitd
-PLIST_DIRS=	libexec/unit/modules \
+PLIST_DIRS?=	libexec/unit/modules \
 		libexec/unit
 
 .if !target(post-install)
