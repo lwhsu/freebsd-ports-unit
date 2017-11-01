@@ -5,22 +5,25 @@ PKGNAMESUFFIX=	-go
 
 COMMENT=	Go module for NGINX Unit
 
-USES?=		go
+USES=		go
 
-PLIST_FILES=	# empty
+PLIST_FILES=	# reset to empty
+PLIST_DIRS=	# reset to empty
 PLIST=	${.CURDIR}/pkg-plist
 
 MASTERDIR=	${.CURDIR}/../unit
 
+CGO_CFLAGS+=	-I${WRKSRC}/src -I${WRKSRC}/build
+
+post-extract:
+	${MKDIR} ${GO_WRKSRC:H}
+	${LN} -sf ${WRKSRC}/src/go/unit ${GO_WRKSRC}
+
 post-configure:
-	cd ${WRKSRC} && \
-	env ${GO_ENV} ./configure go
+	cd ${WRKSRC} && env ${GO_ENV} ./configure go
 
-do-build:
+pre-build:
 	cd ${WRKSRC} && make go
-
-#do-install:
-#	cd ${WRKSRC} && make go-install
 
 post-install:
 	@true # override master's
