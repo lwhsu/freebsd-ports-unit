@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	https://unit.nginx.org/download/
 
 MAINTAINER=	osa@FreeBSD.org
-COMMENT=	Dynamic web application server
+COMMENT?=	Dynamic web application server
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
