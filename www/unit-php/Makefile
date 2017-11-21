@@ -9,6 +9,8 @@ PLIST_FILES=	libexec/unit/modules/php.unit.so
 
 USES=		php:build,embed
 
+USE_RC_SUBR?=	# reset to empty
+
 MASTERDIR=	${.CURDIR}/../unit
 
 post-configure:

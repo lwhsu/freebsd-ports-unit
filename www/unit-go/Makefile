@@ -11,6 +11,8 @@ PLIST_FILES=	# reset to empty
 PLIST_DIRS=	# reset to empty
 PLIST=	${.CURDIR}/pkg-plist
 
+USE_RC_SUBR?=	# reset to empty
+
 MASTERDIR=	${.CURDIR}/../unit
 
 CGO_CFLAGS+=	-I${WRKSRC}/src -I${WRKSRC}/build

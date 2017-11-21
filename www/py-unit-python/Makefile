@@ -10,6 +10,8 @@ USES?=		python gettext-runtime
 
 PLIST_FILES=	libexec/unit/modules/python%%PYTHON_VER%%.unit.so
 
+USE_RC_SUBR?=	# reset to empty
+
 MASTERDIR=	${.CURDIR}/../unit
 
 post-configure:
