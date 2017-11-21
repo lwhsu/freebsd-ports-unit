@@ -1,4 +1,4 @@
-# Created by: Li-Wen Hsu <lwhsu@FreeBSD.org>
+# Created by: Sergey A. Osokin <osa@FreeBSD.org>
 # $FreeBSD$
 
 PORTNAME=	unit
