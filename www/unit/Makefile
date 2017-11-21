@@ -51,7 +51,7 @@ PLIST_DIRS?=	libexec/unit/modules \
 		libexec/unit
 
 USE_RC_SUBR?=	unitd
-SUB_LIST+=	UNIT_PIDFILE=${UNIT_PIDFILE} \
+SUB_LIST=	UNIT_PIDFILE=${UNIT_PIDFILE} \
 		UNIT_SOCK=${UNIT_SOCK} \
 		PREFIX=${PREFIX}
 
