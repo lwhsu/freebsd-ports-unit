@@ -5,7 +5,8 @@ PKGNAMESUFFIX=	-php${PHP_VER}
 
 COMMENT=	PHP ${PHP_VERSION:R} module for NGINX Unit
 
-PLIST_FILES=	libexec/unit/modules/php.unit.so
+PLIST_SUB=	PHP_VER=${PHP_VER}
+PLIST_FILES=	libexec/unit/modules/php%%PHP_VER%%.unit.so
 
 USES=		php:build,embed
 
