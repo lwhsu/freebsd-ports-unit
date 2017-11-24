@@ -14,7 +14,7 @@ MASTERDIR=	${.CURDIR}/../unit
 post-configure:
 	cd ${CONFIGURE_WRKSRC} && \
 	./configure php --lib-path=${LOCALBASE}/lib \
-			--module=php${PHP_VER}.unit.so
+			--module=php${PHP_VER}
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/libexec/unit/modules/
